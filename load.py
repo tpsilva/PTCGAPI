@@ -4,7 +4,6 @@ import os
 
 from card import Card
 
-
 def load_all_cards(data_dir="data"):
 	cards = []
 	for filename in os.listdir(data_dir):
@@ -21,13 +20,14 @@ def find_card_by_id(cards, card_id):
     return None  # Not found
 
 cards = load_all_cards()
+card_by_id = {c.id: c for c in cards}
 
 app = FastAPI()
 
 @app.get("/cards/{language}/{set}/{id}")
 def get_card(language: str, set: str, id: str):
     card_id = set + "-" + id
-    card = find_card_by_id(cards, card_id)
+    card = card_by_id.get(card_id)
     if card:
         return {"id": card.id, "name": card.name[language]}
     return {"error": "Card not found"}, 404
