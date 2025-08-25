@@ -1,6 +1,6 @@
 # Pokémon Card API
 
-A small Python project that loads card data from JSON files in the `data/` directory and exposes a minimal FastAPI endpoint to look up a card's name by language.
+A small Python project that loads card data from JSON files in the `data/` directory and exposes a minimal FastAPI endpoint to look up a card's name and category by language.
 
 ## Requirements
 
@@ -35,8 +35,8 @@ Request:
 curl http://127.0.0.1:8000/cards/en/SSP/238
 ```
 
-The endpoint constructs the internal card id as `{set}-{id}` (for example `SSP-238`) and will return either the card data (id and localized name) or a 404-style error object. Example success response:
+The endpoint constructs the internal card id as `{set}-{id}` (for example `SSP-238`) and will return either the card data (id, category and localized name) or a 404-style error object. Example success response:
 
 ```json
-{ "id": "SSP-238", "name": "Pikachu ex" }
+{"id":"SSP-238","category":"Pokemon","name":"Pikachu ex"}
 ```

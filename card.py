@@ -5,3 +5,4 @@ from base_dataclass import FromDictMixin
 class Card(FromDictMixin):
     id: str
     name: str
+    category: str
