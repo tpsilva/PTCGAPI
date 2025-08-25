@@ -13,12 +13,6 @@ def load_all_cards(data_dir="data"):
 				cards.extend([Card.from_dict(d) for d in js])
 	return cards
 
-def find_card_by_id(cards, card_id):
-    for card in cards:
-        if card.id == card_id:
-            return card
-    return None  # Not found
-
 cards = load_all_cards()
 card_by_id = {c.id: c for c in cards}
 
