@@ -22,7 +22,7 @@ pip install -r requirements.txt
 Start the FastAPI server in dev mode:
 
 ```bash
-fastapi dev load.py
+fastapi dev main.py
 ```
 
 The server will load all JSON files from the `data/` directory at startup.
