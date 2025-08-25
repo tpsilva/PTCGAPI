@@ -12,7 +12,7 @@ A small Python project that loads card data from JSON files in the `data/` direc
 Create a virtual environment and install dependencies:
 
 ```bash
-python -m venv .venv
+python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ```

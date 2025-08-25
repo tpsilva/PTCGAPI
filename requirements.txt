@@ -1,8 +1,9 @@
 # requirements.txt
 # External packages required by the project
-fastapi==0.100.0
+fastapi==0.116.1
+fastapi[standard]==0.116.1
 
 # If you add more third-party packages, list them here, one per line.
 
 # Recommended Python version:
-python>=3.12
+#python>=3.12
