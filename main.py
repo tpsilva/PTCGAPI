@@ -29,5 +29,5 @@ def get_card(language: str, set: str, id: str):
     card_id = set + "-" + id
     card = card_by_id.get(card_id)
     if card:
-        return {"id": card.id, "name": card.name[language]}
+        return {"id": card.id, "category": card.category, "name": card.name[language]}
     return {"error": "Card not found"}, 404
